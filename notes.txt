@@ -1,0 +1,19 @@
+NDMI analyses
+
+ANALYSIS
+Get ndmi view of field near bois fort, over 2 month period CHECK!
+Couple ndmi analysis with radar view of the harvest (black then white when harvested)
+ML Use cases: (XGB type beat)
+ - link ndmi indices as time series to productivity: interesting cause informs
+   on how to best irrigate. Would be interesting to have freshly_irrigated data point
+   for this
+   thus have a prediction of when is best to reirrigate
+
+WEBSITE
+text
+show the 1 tc picture of the scene
+then display the 9 tcnd images as a carousel
+text to explain what we see, how to act on it: precision irrigation
+quant analysis?
+add references 
+

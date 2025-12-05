@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head runat="server">
+        <title>NDMI Analysis - EURL DES BOIS FORTS </title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE-Edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="stylesheet" href="./styles.css"/>
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        />
+
+    </head>
+
+    <body>
+
+        <div class="title">
+            <h1> Crop Hydration Analysis - EURL DES BOIS FORTS </h1>
+        </div>
+
+        <br />
+        <br />
+        <br />
+
+        <div class="title">
+            <h4>Freelance Initiative - Romain Huet</h4>
+        </div>
+        
+        <br/>
+
+        <div class="about">
+            This project was conducted as a freelance initiative for the farm "EURL Des Bois Forts".
+            The objective is to measure the level of moisture present in crops and plot its 
+            evolution to optimize irrigation by detecting early drought signs, mitigate 
+            waterlogging and indicate where to start harvesting. This is achieved through the
+            use of Sentinel-2 optical satellite imagery, mapping a Normalized Difference Moisture
+            Index (NDMI) image to the bounds of a specific field within a true color image. 
+            The NDMI is calculated as the normalized difference between Sentinel-2's B08 
+            and B11 spectral bands, representing Near-Infrared (NIR) and Short-Wave Infrared (SWIR)
+            wavelengths. This combination removes variations induced by leaf internal structure 
+            and leaf dry matter content, improving the accuracy in retrieving the vegetation water
+            content (Ceccato et al., 2001).
+        </div>
+
+        <br />
+        <span id="tc"></span>
+        <br />
+        <br />
+
+        <div class="section-title">
+            <h2>True Color View</h2>
+        </div>
+        <br />
+        <br />
+
+        <div id="presentation" class="wrapper">
+            <img src="./images/true_color.png" />
+        </div>
+        <br />
+        <br />
+        <label id="lakeLabel"><h5>Les Bois Forts Farm - True Color</h5></label>
+        <br />
+        <div class="about">
+            Here is a true color image of the farm, using a combination of
+            Sentinel-2's B02, B03 and B04 bands. The crops cultivated in the 
+            fields are predominantly rapeseed, sunflower & corn. 
+        </div>
+        
+        <br />
+        <br />
+        <span id="ndmi"></span>
+        <br />
+        <br />
+        <br />
+
+
+        <div class="section-title">
+            <h2>NDMI Temporal Analysis</h2>
+        </div>      
+        
+        <div class="carousel">
+            <div id="images" class="wrapper">
+                <img src="./images/ndmi_analysis_0.png" />
+                <img src="./images/ndmi_analysis_1.png" />
+                <img src="./images/ndmi_analysis_2.png" />
+                <img src="./images/ndmi_analysis_3.png" />
+                <img src="./images/ndmi_analysis_4.png" />
+                <img src="./images/ndmi_analysis_5.png" />
+                <img src="./images/ndmi_analysis_6.png" />
+                <img src="./images/ndmi_analysis_7.png" />
+                <img src="./images/ndmi_analysis_8.png" />
+            </div>
+
+            <div class="buttons">
+                <button id="prev">
+                    <i class="fa-solid fa-backward">
+                    </i>
+                </button>
+                <button id="next">
+                    <i class="fa-solid fa-forward">
+                    </i>
+                </button>
+            </div>
+        </div>
+
+        <label id="lakeLabel"><h5>Les Bois Forts Farm - NDMI</h5></label>
+
+        <br />
+        <div class="about">
+            The temporal analysis displays images of the farm
+            from 01/06/2025 to 31/07/2025 on a weekly basis. 
+            Sentinel-2 revisit time is around 5 days for a given 
+            location, thus about one image is taken per week - 
+            if there are more the one with the lowest cloud cover
+            is selected. The NDMI is plotted within 
+            a polygon representing two crop fields, one circular with
+            automatised irrigation typical of such fields 
+            and one rectangular that may receive manned irrigation. 
+            The NDMI works as a ratio ranging
+            from -1 (completely dry/no vegetation) to 1 
+            (completely wet/drowned vegetation), represented
+            on the image as a color scale ranging from yellow to blue.
+            On 1st June we observe recent irrigation or rainfall as 
+            the two observed fields are colored in darker shades of
+            blue (actual ratio values are ~ 0.3, meaning good 
+            vegetation moisture content). As
+            time progresses, the hydration values decrease. It is 
+            important to note that the moisture content appears
+            to decrease in inconsistent patterns over the fields, 
+            indicating possible variations in topography. From an
+            economic standpoint, this is interesting as this 
+            information can direct irrigation practices, saving 
+            important costs and enabling better productivity. Limitations
+            to the reliability of this project appear in week 07-01 - 07-07,
+            where clouds are obstructing the image and corrupt the NDMI values. 
+        </div>
+
+        <br />
+        <br />     
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div class="section-title">
+            <h2>Useful Links</h2>
+        </div>
+
+        <br />
+        <br />
+
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0034425701001912">Detecting Vegetation Water Content - Ceccato et al, 2001</a>
+        <br />
+        <a href="https://eos.com/make-an-analysis/ndmi/">EOS Data Analytics NDMI resources</a>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        © Romain Huet 2025
+
+        <script 
+            src="./main.js">
+        </script>
+    </body> 
+</html>
+
+
+
+
+
+
